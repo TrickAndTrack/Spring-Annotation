@@ -69,5 +69,14 @@ public class UserController {
 ```
  the getUser method is annotated with @ModelAttribute, which tells Spring to bind any request parameters with matching names to the User object passed as an argument. The id parameter is also annotated with @PathVariable, which tells Spring to bind the id parameter from the request URL to the id argument.
 
+`@Component:` It is a class-level annotation. It is used to mark a Java class as a bean. 
 
+`@Service`: It is also used at the class level. It tells the Spring that the class contains the business logic.	Same as `@component`
 
+In this example, the UserService class is annotated with @Service, which tells Spring to treat it as a service component. The userRepository field is also annotated with @Autowired, which tells Spring to inject an instance of the UserRepository interface into the service.
+
+`@Repository` : It is a class-level annotation. The repository is a DAOs (Data Access Object) that access the database directly. 
+
+`@EnableAutoConfiguration` annotation tells Spring Boot to "guess" how you will want to configure Spring, based on the jar dependencies that you have added. For example, // 2) example: Spring Boot auto-configuration can automatically configure the Thymeleaf template resolver.
+
+`@SpringBootApplication`: It is a combination of three annotations `@EnableAutoConfiguration`, `@ComponentScan`, and `@Configuration`.
