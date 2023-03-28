@@ -3,6 +3,7 @@
 ` @Controller `annotation is typically used to annotate classes that handle user requests in a web application. When a request is received by the application, the Spring Framework uses the @Controller annotation to identify the controller that is responsible for processing the request.
 
 `@RestController` which is used for RESTful web services. it's the combination of `@Controller` and `@ResponseBody` annotation.
+it is a controller with @ResponseBody it is convert an object into JSON format. 
 
 `@RequestMapping` annotation is used to map a URL to either an entire class or a particular handler method. It has the following optional options.
 
@@ -80,3 +81,24 @@ In this example, the UserService class is annotated with @Service, which tells S
 `@EnableAutoConfiguration` annotation tells Spring Boot to "guess" how you will want to configure Spring, based on the jar dependencies that you have added. For example, // 2) example: Spring Boot auto-configuration can automatically configure the Thymeleaf template resolver.
 
 `@SpringBootApplication`: It is a combination of three annotations `@EnableAutoConfiguration`, `@ComponentScan`, and `@Configuration`.
+
+`@GetMapping:` which consumes the data: get.
+`@PostMapping`: produce: post-submit (submiting data).
+`@DeleteMapping`: delete.
+`@PutMapping` submit -->update 
+
+`@RequestParam`
+```
+@Controller
+public class UserController {
+
+    @GetMapping("/users")
+    public String getUsers(@RequestParam("page") int page, Model model) {
+        // logic to retrieve users from database using page parameter
+        model.addAttribute("users", users);
+        return "user-list";
+    }
+}
+```
+
+the getUsers method is annotated with @RequestParam, which tells Spring to extract the value of the page request parameter from the incoming HTTP request, and bind it to the page method parameter.
