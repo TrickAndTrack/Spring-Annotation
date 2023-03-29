@@ -102,3 +102,8 @@ public class UserController {
 ```
 
 the getUsers method is annotated with @RequestParam, which tells Spring to extract the value of the page request parameter from the incoming HTTP request, and bind it to the page method parameter.
+
+
+`@Autowired` can also be used on constructor parameters and method parameters to indicate that Spring should automatically inject the required objects. This is known as constructor injection and method injection, respectively.
+
+Note that the `@Autowired` annotation is part of Spring's dependency injection framework, and is not a standard Java annotation.
