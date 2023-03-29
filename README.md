@@ -107,3 +107,5 @@ the getUsers method is annotated with @RequestParam, which tells Spring to extra
 `@Autowired` can also be used on constructor parameters and method parameters to indicate that Spring should automatically inject the required objects. This is known as constructor injection and method injection, respectively.
 
 Note that the `@Autowired` annotation is part of Spring's dependency injection framework, and is not a standard Java annotation.
+
+`@Value` is an annotation in Spring Framework that is used to inject values into fields or methods from external sources such as properties files or environment variables. This annotation can be used to inject values of any type, including strings, numbers, booleans, and arrays.
