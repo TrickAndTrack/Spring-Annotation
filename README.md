@@ -82,10 +82,15 @@ In this example, the UserService class is annotated with @Service, which tells S
 
 `@SpringBootApplication`: It is a combination of three annotations `@EnableAutoConfiguration`, `@ComponentScan`, and `@Configuration`.
 
-`@GetMapping:` which consumes the data: get.
-`@PostMapping`: produce: post-submit (submiting data).
-`@DeleteMapping`: delete.
-`@PutMapping` submit -->update 
+`@GetMapping`: which consumes the data: get. This annotation is used to map HTTP GET requests to a specific method in a controller. It is commonly used to retrieve data or perform read operations.
+
+`@PostMapping`: produce: post-submit (submiting data).This annotation is used to map HTTP POST requests to a specific method in a controller. It is commonly used to create new resources or perform write operations.
+
+`@DeleteMapping`: This annotation is used to map HTTP DELETE requests to a specific method in a controller. It is commonly used to delete resources.
+
+`@PutMapping`: submit -->update This annotation is used to map HTTP PUT requests to a specific method in a controller. It is commonly used to update resources, replacing the entire resource.
+
+`@PatchMapping` : This annotation is used to map HTTP PATCH requests to a specific method in a controller. It is commonly used to perform partial updates to resources, typically updating only specific fields.
 
 `@RequestParam`
 ```
