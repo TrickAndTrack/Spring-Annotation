@@ -114,3 +114,20 @@ the getUsers method is annotated with @RequestParam, which tells Spring to extra
 Note that the `@Autowired` annotation is part of Spring's dependency injection framework, and is not a standard Java annotation.
 
 `@Value` is an annotation in Spring Framework that is used to inject values into fields or methods from external sources such as properties files or environment variables. This annotation can be used to inject values of any type, including strings, numbers, booleans, and arrays.
+
+`@RequestParam`
+Used to capture data from the query string of a URL.
+
+The query string is the part that comes after the ? symbol and consists of key-value pairs separated by &.
+
+Example: /users?name=John&age=30
+
+Here, @RequestParam can be used to extract the values of name and age.
+
+`@PathVariable`
+
+Used to capture data from the path of a URL.
+
+Path variables are defined as placeholders within the URL path enclosed in curly braces {}.
+
+Example: /users/{id}
