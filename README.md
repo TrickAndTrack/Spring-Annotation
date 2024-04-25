@@ -50,7 +50,7 @@ public class Person {
 ```
 In this example, the setName() method is marked with @Required, which means that Spring will throw an exception if this method is not called before the Person bean is used.
 
-`@Configuration` annotation is a powerful tool for creating and configuring beans in the Spring application context, and is essential for creating complex and modular Spring applications.
+`@Configuration` annotation is a powerful tool for creating and configuring beans in the Spring application context, and is essential for enabling dependency injcetion and organizing configuration logic in a spring boot application.
 `@Configuration` By default, Spring will scan the package containing the class annotated with `@SpringBootApplication` (or its predecessor `@EnableAutoConfiguration`) for Spring-managed beans. However, if you want to specify a different base package or packages, you can use the @ComponentScan annotation.
 
 
